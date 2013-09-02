@@ -1,8 +1,29 @@
 $(document).ready(function() {   
+  // setup for blinking arrow
+  var blink_interval = setInterval(function() {
+          $("#blinkingarrow").fadeOut('slow', function() {
+              if (blink_interval != false) {
+                $(this).fadeIn('slow');
+              }
+          });
+  }, 1500);
   // setup for horizontal scroll
-  $('html, body, *').mousewheel(function(e, delta) {
-    this.scrollLeft -= (delta * 40);
-    e.preventDefault();
+  $('html, body, *').on('mousewheel keydown', function(e, delta) {
+        if (e.type == 'keydown' && (e.keyCode >= 37 && e.keyCode <= 40)) {
+           // 38 up 40 down
+           switch (e.keyCode) {
+               case 37:
+               case 38:
+                   delta = 1;
+               break;
+               case 39:
+               case 40:
+                   delta = -1;
+               break;
+           }
+        }
+        this.scrollLeft -= (delta * 40);
+        //e.preventDefault();
   });
 
   // create width + height variables for initial reference
@@ -206,8 +227,30 @@ $(document).ready(function() {
     'top': $boaty
   });
 
+  function appearArrow() {
+    if (!blink_interval) {
+      blink_interval = setInterval(function() {
+          $("#blinkingarrow").fadeOut('slow', function() {
+              if (blink_interval != false) {
+                $(this).fadeIn('slow');
+              }
+          });
+      }, 1500);
+      $('#blinkingarrow').fadeIn('slow');
+    }
+  }
+
+  function dissapearArrow() {
+    if (blink_interval) {
+      clearInterval(blink_interval);
+      $('#blinkingarrow').fadeOut('slow');
+      blink_interval = false;
+    }
+  }
+
   // ANIMATION
-  $(window).scroll(function(){
+  //$(window).scroll(function(){
+  function scrollAnimation() {
     var y = $(window).scrollLeft();
     y += $thew / 2;
     
@@ -218,6 +261,15 @@ $(document).ready(function() {
     $("#train").css('display', 'none');
     $("#car").css('display', 'none');
     $("#boat").css('display', 'none');
+
+    arrow_pos = y/$thew;
+    console.log(arrow_pos);
+    if (arrow_pos > 0 && arrow_pos <= 0.52) {
+        appearArrow();
+    }
+    if (arrow_pos > 0.52) {
+        dissapearArrow();
+    }
 
     if (_screen == 1) {
         $('#plane').css('display','inline');
@@ -234,5 +286,9 @@ $(document).ready(function() {
     if (_screen == 5) {
         $("#boat").css('display','inline');
     }
- });
+  }
+
+  $(window).scroll(function() {
+      scrollAnimation();
+  });
 });

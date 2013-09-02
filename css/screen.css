@@ -173,6 +173,9 @@ body {
       width: 480px; }
     .scroller #block1 #plane {
       position: fixed; }
+    .scroller #block1 #blinkingarrow {
+      position: absolute;
+      z-index: 1;}
   .scroller #block2 {
     background: #D16D7B; }
     .scroller #block2 #busterminal {
