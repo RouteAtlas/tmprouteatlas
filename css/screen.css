@@ -1,0 +1,304 @@
+/* RESET STYLES - EricMeyer */
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, font, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  background: transparent; }
+
+ol, ul {
+  list-style: none; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+.nofocus:focus {
+  outline: none; }
+
+.placeholder {
+  color: #aaa; }
+
+/* COMUNES */
+.cleaner {
+  clear: both; }
+
+.wrapper {
+  width: 960px;
+  margin: 0 auto;
+  position: relative; }
+
+.wrapper:after {
+  content: ".";
+  display: block;
+  height: 0;
+  clear: both;
+  visibility: hidden;
+  overflow: hidden; }
+
+.dimmer {
+  background-color: #000;
+  filter: alpha(opacity=75);
+  -moz-opacity: 0.75;
+  opacity: 0.75;
+  height: 500px;
+  position: absolute;
+  top: 0;
+  width: 100%; }
+
+.noborder {
+  border: none !important; }
+
+.noborderL {
+  border-left: none !important; }
+
+.noborderR {
+  border-right: none !important; }
+
+.noborderT {
+  border-top: none !important; }
+
+.noborderB {
+  border-bottom: none !important; }
+
+.nomargin {
+  margin: 0 !important; }
+
+.nomarginL {
+  margin-left: 0 !important; }
+
+.nomarginR {
+  margin-right: 0 !important; }
+
+.nomarginT {
+  margin-top: 0 !important; }
+
+.nomarginB {
+  margin-bottom: 0 !important; }
+
+.nopadding {
+  padding: 0 !important; }
+
+.nopaddingL {
+  padding-left: 0 !important; }
+
+.nopaddingR {
+  padding-right: 0 !important; }
+
+.nopaddingT {
+  padding-top: 0 !important; }
+
+.nopaddingB {
+  padding-bottom: 0 !important; }
+
+.floaterL {
+  float: left; }
+
+.floaterR {
+  float: right; }
+
+.centered {
+  text-align: center; }
+
+.aright {
+  text-align: right; }
+
+.aleft {
+  text-align: left; }
+
+* + html .clearfix {
+  display: inline-block; }
+
+* html .clearfix {
+  height: 1%; }
+
+.clearfix:after {
+  content: ".";
+  display: block;
+  height: 0;
+  clear: both;
+  visibility: hidden;
+  overflow: hidden; }
+
+/* COLORS */
+/* MIXINS */
+/* LAYOUT */
+body {
+  font-family: 'Helvetica Neue','Helvetica','Arial','sans-serif';
+  font-size: 14px;
+  font-weight: normal;
+  color: black; 
+  overflow-x: scroll; 
+  overflow-y: hidden; 
+}
+
+.scroller {
+  position: relative; }
+  .scroller hr {
+    border: none;
+    border-bottom: 1px solid white;
+    heigth: 1px;
+    width: 100%;
+    position: absolute; }
+  .scroller hr.shadow {
+    border: none;
+    border-bottom: 1px solid #999;
+    heigth: 1px;
+    width: 100%;
+    position: absolute;
+    opacity: 0.6; }
+  .scroller .block {
+    position: absolute;
+    top: 0;
+    left: 0; }
+  .scroller #block1 {
+    background: #6D3A5D; }
+    .scroller #block1 #startclouds {
+      position: absolute;
+      top: 0;
+      left: 0;
+      background: url(../img/clouds-inicial.png) repeat-y 0 0;
+      width: 295px; }
+    .scroller #block1 #logo {
+      position: absolute;
+      z-index: 10; }
+    .scroller #block1 #separadorclouds {
+      position: absolute;
+      top: 0;
+      right: -240px;
+      z-index: 10;
+      background: url(../img/clouds-right.png) repeat-y 0 0;
+      width: 480px; }
+    .scroller #block1 #plane {
+      position: fixed; }
+  .scroller #block2 {
+    background: #D16D7B; }
+    .scroller #block2 #busterminal {
+      position: absolute;
+      z-index: 1; }
+    .scroller #block2 #bus {
+      position: fixed;
+      z-index: 2; }
+    .scroller #block2 #arbolitos {
+      position: absolute;
+      z-index: 3; }
+    .scroller #block2 #tunel {
+      position: absolute;
+      z-index: 1; }
+    .scroller #block2 #tunela {
+      position: absolute;
+      z-index: 3; }
+    .scroller #block2 #placa1 {
+      position: absolute; }
+  .scroller #block3 {
+    background: #FFD460; }
+    .scroller #block3 #puente {
+      position: absolute;
+      z-index: 1; }
+    .scroller #block3 #nubecitas {
+      position: absolute;
+      z-index: 3; }
+    .scroller #block3 #train {
+      position: fixed;
+      z-index: 2; }
+    .scroller #block3 #tunel2 {
+      position: absolute;
+      z-index: 1; }
+    .scroller #block3 #tunel2a {
+      position: absolute;
+      z-index: 3; }
+    .scroller #block3 #placa2 {
+      position: absolute; }
+  .scroller #block4 {
+    background: #9EBBCD; }
+    .scroller #block4 #city {
+      position: absolute;
+      z-index: 1; }
+    .scroller #block4 #arbolitos2 {
+      position: absolute;
+      z-index: 3; }
+    .scroller #block4 #car {
+      position: fixed;
+      z-index: 2; }
+    .scroller #block4 #tunel3 {
+      position: absolute;
+      z-index: 3; }
+    .scroller #block4 #placa3 {
+      position: absolute; }
+  .scroller #block5 {
+    background: #D16D7B; }
+    .scroller #block5 #boat {
+      position: fixed;
+      z-index: 2; }
+    .scroller #block5 #beach {
+      position: absolute;
+      z-index: 1; }
+    .scroller #block5 #placa4 {
+      position: absolute; }
+  .scroller #block6 {
+    background: #9EBBCD; }
+    .scroller #block6 #finalclouds {
+      position: absolute;
+      top: 0;
+      right: 0;
+      background: url(../img/clouds-final.png) repeat-y 0 0;
+      width: 275px; }
+    .scroller #block6 #cloudsmiddle {
+      position: absolute;
+      top: 0;
+      left: -240px;
+      z-index: 10;
+      background: url(../img/clouds-middle.png) repeat-y 0 0;
+      width: 479px; }
+    .scroller #block6 #placa5 {
+      position: absolute; }
+    .scroller #block6 #logofinal {
+      position: absolute; }
+    .scroller #block6 p#socialnetworking {
+      position: absolute;
+      width: 410px;
+      height: 60px; }
+      .scroller #block6 p#socialnetworking a {
+        display: block;
+        width: 50px;
+        height: 40px;
+        float: left;
+        margin: 0 10px; }
+      .scroller #block6 p#socialnetworking a.twitter {
+        background: url(../img/socialnetworking.png) no-repeat -4px -10px; }
+      .scroller #block6 p#socialnetworking a.pinterest {
+        background: url(../img/socialnetworking.png) no-repeat -56px -10px; }
+      .scroller #block6 p#socialnetworking a.youtube {
+        background: url(../img/socialnetworking.png) no-repeat -108px -10px; }
+      .scroller #block6 p#socialnetworking a.vimeo {
+        background: url(../img/socialnetworking.png) no-repeat -160px -10px; }
+      .scroller #block6 p#socialnetworking a.facebook {
+        background: url(../img/socialnetworking.png) no-repeat -211px -10px; }
+  .scroller #bus, .scroller #boat, .scroller #train, .scroller #car {
+    display: none; }
+
+    /* Preloader */
+
+#preloader {
+    position:absolute;
+    top:0;
+    left:0;
+    right:0;
+    bottom:0;
+    background-color:#fff; /* change if the mask should have another color then white */
+    z-index:99; /* makes sure it stays on top */
+}
+
+#status {
+    width:220px;
+    height:200px;
+    position:absolute;
+    left:50%; /* centers the loading animation horizontally one the screen */
+    top:50%; /* centers the loading animation vertically one the screen */
+    background-image:url(../img/ajax-loader.gif); /* path to your loading animation */
+    background-repeat:no-repeat;
+    background-position:center;
+    margin:-100px 0 0 -100px; /* is width and height divided by two */
+}
