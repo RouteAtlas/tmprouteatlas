@@ -1,9 +1,9 @@
-$(document).ready(function() {   
+$(document).ready(function() {
   // setup for blinking arrow
   var blink_interval = setInterval(function() {
-          $("#blinkingarrow").fadeOut('slow', function() {
+          $("#blinkingarrow").fadeIn('slow', function() {
               if (blink_interval != false) {
-                $(this).fadeIn('slow');
+                $(this).fadeOut('slow');
               }
           });
   }, 1500);
@@ -56,20 +56,20 @@ $(document).ready(function() {
   $socialnetworkingx = (($thew/2)-((300/2)+20));
   $socialnetworkingy = (($theh/2)-((60/2)-100));
 
-  
+
   // bus terminal
   $busterminalx = (($thew/2)-(319/2));
   $busterminaly = (($theh/2)-((322/2)-23));
   $arbolitosx = (($thew/2)-(262/2));
   $arbolitosy = (($theh/2)-((38/2)+4));
-  
+
   // separadores
   $tunely = (($theh/2)-((207/2)+32));
   $tunelay = (($theh/2)-((207/2)+32));
   $tunel2y = (($theh/2)-((204/2)+31));
   $tunel2ay = (($theh/2)-((204/2)+31));
   $tunel3y = (($theh/2)-((242/2)+12));
-  
+
   // puente
   $puentex = (($thew/2)-(286/2));
   $puentey = (($theh/2)-((377/2)-70));
@@ -113,15 +113,15 @@ $(document).ready(function() {
   $('#block4').css('left',($thew*3));
   $('#block5').css('left',($thew*4));
   $('#block6').css('left',($thew*5));
-  
+
   // positioning fixed items
   $('hr').css('top',($theh/2));
   $('hr.shadow').css('top',($theh/2)+55);
   // $('hr.shadow').css('top',(($theh/2)-((133/2)+250)));
   $('#startclouds').css('height',$theh);
   $('#finalclouds').css('height',$theh);
-  $('#separadorclouds').css('height', $theh);  
-  $('#cloudsmiddle').css('height', $theh);  
+  $('#separadorclouds').css('height', $theh);
+  $('#cloudsmiddle').css('height', $theh);
   $('#logo').css({
     'left': $logox,
     'top': $logoy
@@ -231,12 +231,13 @@ $(document).ready(function() {
     if (!blink_interval) {
       blink_interval = setInterval(function() {
           $("#blinkingarrow").fadeOut('slow', function() {
-              if (blink_interval != false) {
+              if (blink_interval !== false) {
                 $(this).fadeIn('slow');
               }
           });
-      }, 1500);
-      $('#blinkingarrow').fadeIn('slow');
+      }, 1700);
+
+     $('#blinkingarrow').fadeIn('slow');
     }
   }
 
@@ -253,7 +254,7 @@ $(document).ready(function() {
   function scrollAnimation() {
     var y = $(window).scrollLeft();
     y += $thew / 2;
-    
+
     _screen = Math.floor(y / $thew) + 1;
 
     $('#plane').css('display', 'none');
