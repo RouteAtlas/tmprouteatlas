@@ -9,21 +9,29 @@ $(document).ready(function() {
   }, 1500);
   // setup for horizontal scroll
   $('html, body, *').on('mousewheel keydown', function(e, delta) {
-        if (e.type == 'keydown' && (e.keyCode >= 37 && e.keyCode <= 40)) {
-           // 38 up 40 down
-           switch (e.keyCode) {
-               case 37:
-               case 38:
-                   delta = 1;
-               break;
-               case 39:
-               case 40:
-                   delta = -1;
-               break;
-           }
+
+        if (e.type == 'keydown') {
+
+          if (e.keyCode >= 37 && e.keyCode <= 40) {
+             // 38 up 40 down
+             switch (e.keyCode) {
+                 case 37:
+                 case 38:
+                     delta = 1;
+                 break;
+                 case 39:
+                 case 40:
+                     delta = -1;
+                 break;
+             }
+          } else {
+            return;
+          }
+
         }
+
         this.scrollLeft -= (delta * 40);
-        //e.preventDefault();
+        e.preventDefault();
   });
 
   // create width + height variables for initial reference
