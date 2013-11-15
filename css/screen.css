@@ -279,6 +279,17 @@ body {
         background: url(../img/socialnetworking.png) no-repeat -160px -10px; }
       .scroller #block6 p#socialnetworking a.facebook {
         background: url(../img/socialnetworking.png) no-repeat -211px -10px; }
+    .scroller #block6 p#email {
+      font-family: Gotham-Medium;
+      position: absolute; 
+      top:70%; 
+      left:45%; }
+    .scroller #block6 p#email a {
+      text-decoration: none;
+      color: #FFFFFF;
+      font-size: 16px;
+    }
+
   .scroller #bus, .scroller #boat, .scroller #train, .scroller #car {
     display: none; }
 
@@ -304,4 +315,9 @@ body {
     background-repeat:no-repeat;
     background-position:center;
     margin:-100px 0 0 -100px; /* is width and height divided by two */
+}
+
+@font-face {
+font-family: 'Gotham-Medium';
+src: url('../font/Gotham-Medium.otf');
 }
