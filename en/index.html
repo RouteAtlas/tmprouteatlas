@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title>RouteAtlas</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, user-scalable=no">
+
+        <link rel='stylesheet' href='../css/normalize.css'>
+        <link rel='stylesheet' href='../css/main.css'>
+        <link rel='stylesheet' href='../css/screen.css'>
+        <script src='../js/vendor/jquery-1.9.1.min.js'></script>
+        <script src='../js/vendor/modernizr-2.6.2.min.js'></script>
+        <!-- Preloader -->
+        <script type="text/javascript">
+            //<![CDATA[
+                $(window).load(function() { // makes sure the whole site is loaded
+                    $("#status").fadeOut(); // will first fade out the loading animation
+                    $("#preloader").delay(350).fadeOut("slow"); // will fade out the white DIV that covers the website.
+                })
+            //]]>
+        </script>
+    </head>
+    <body>
+        <!--[if lt IE 7]>
+            <p class="chromeframe">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to improve your experience.</p>
+        <![endif]-->
+
+<!-- Preloader -->
+<div id="preloader">
+    <div id="status">&nbsp;</div>
+</div>
+<!-- ANIMATION -->
+<div class="scroller">
+  <div id="block1" class="block">
+    <div id="startclouds"></div>
+    <div id="separadorclouds"></div>
+    <div id="lang_buttons" style="top: 7%; left: 40%;">
+        <a href="http://www.routeatlas.com" title="Español"><img src="../img/btn/btn_spa.png" /></a>
+        <a href="http://www.routeatlas.com/pt" title="Portugues"><img src="../img/btn/btn_por.png" /></a>
+        <a href="http://www.routeatlas.com/en" title="English"><img src="../img/btn/btn_en.png" /></a>
+    </div>
+    <img src="../img/logo.png" id="logo" />
+    <img src="../img/plane.png" id="plane" />
+    <img src="../img/arrow-down.png" id="blinkingarrow" style="display: none; top:90%; left:49%;"/>
+  </div>
+  <div id="block2" class="block">
+    <hr>
+    <hr class="shadow">
+    <img src="../img/busterminal.png" id="busterminal" />
+    <img src="../img/bus.png" id="bus" />
+    <img src="../img/arbolitos.png" id="arbolitos" />
+    <img src="../img/tunel.png" id="tunel" />
+    <img src="../img/tunela.png" id="tunela" />
+    <img src="../img/en/EN_placa1.png" id="placa1" />
+  </div>
+  <div id="block3" class="block">
+    <hr>
+    <hr class="shadow">
+    <img src="../img/puente.png" id="puente" />
+    <img src="../img/nubecitas.png" id="nubecitas" />
+    <img src="../img/tren.png" id="train" />
+    <img src="../img/tunel2.png" id="tunel2" />
+    <img src="../img/tunel2a.png" id="tunel2a" />
+    <img src="../img/en/EN_placa2.png" id="placa2" />
+  </div>
+  <div id="block4" class="block">
+    <hr>
+    <hr class="shadow">
+    <img src="../img/city.png" id="city" />
+    <img src="../img/arbolitos.png" id="arbolitos2" />
+    <img src="../img/car.png" id="car" />
+    <img src="../img/tunel3.png" id="tunel3" />
+    <img src="../img/en/EN_placa3.png" id="placa3" />
+  </div>
+  <div id="block5" class="block">
+    <hr>
+    <hr class="shadow">
+    <img src="../img/boat.png" id="boat" />
+    <img src="../img/beach.png" id="beach" />
+    <img src="../img/en/EN_placa4.png" id="placa4" />
+  </div>
+  <div id="block6" class="block">
+    <div id="finalclouds"></div>
+    <div id="cloudsmiddle"></div>
+    <img src="../img/en/EN_placa5.png" id="placa5" />
+    <img src="../img/logo-final.png" id="logofinal" />
+    <p id="socialnetworking"><a href="https://twitter.com/RouteAtlas" target="_blank" class="twitter"></a><a href="http://pinterest.com/routeatlas/boards/" target="_blank" class="pinterest"></a><a href="http://www.youtube.com/user/routeatlas" target="_blank" class="youtube"></a><a href="https://vimeo.com/routeatlas" target="_blank" class="vimeo"></a><a href="https://www.facebook.com/RouteAtlas" target="_blank" class="facebook"></a></p>
+    <p id="email"><a href="" target="_blank" id="email"></a></p>
+  </div>
+  <div style="clear: both;"></div>
+</div>
+        <script src='../js/vendor/jquery-1.9.1.min.js'></script>
+        <script src='../js/jquery.mousewheel.js'></script>
+        <script src='../js/plugins.js'></script>
+        <script src='../js/main.js'></script>
+    <script type="text/javascript">
+        var m = 'moc.saltaetuor@olleh'.split('').reverse().join('');
+        $('#email a').attr('href', 'mailto:' + m).text(m);
+    </script>
+
+	<script type="text/javascript">
+
+	  var _gaq = _gaq || [];
+	  _gaq.push(['_setAccount', 'UA-43353223-1']);
+	  _gaq.push(['_trackPageview']);
+
+	  (function() {
+	    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+	    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+	    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+	  })();
+
+	</script>
+    </body>
+</html>
