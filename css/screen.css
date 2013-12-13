@@ -154,7 +154,9 @@ body {
     top: 0;
     left: 0; }
   .scroller #block1 {
-    background: #6D3A5D; }
+    /*background: #6D3A5D;*/
+      background: #9EBBCD;
+  }
     .scroller #block1 #startclouds {
       position: absolute;
       top: 0;
@@ -174,6 +176,9 @@ body {
     .scroller #block1 #plane {
       position: fixed; }
     .scroller #block1 #blinkingarrow {
+      position: absolute;
+      z-index: 1;}
+    .scroller #block1 #lang_buttons {
       position: absolute;
       z-index: 1;}
   .scroller #block2 {
